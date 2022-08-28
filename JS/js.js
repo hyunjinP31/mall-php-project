@@ -10,14 +10,12 @@ burger.addEventListener('click', function(){
 let viewDiv = document.querySelector('#moveDiv');
 let prevBtn = document.querySelector('#prev');
 let nextBtn = document.querySelector('#next');
-console.log(viewDiv);
 let lastImg = viewDiv.lastElementChild;
 let firstImg = viewDiv.firstElementChild;
 let bgColor = document.querySelector('#visual'); // bg컬러
 let bgArr = ["rgb(218, 236, 240)","rgb(251, 234, 239)","rgb(248, 244, 216)",
 "rgb(230, 233, 246)","rgb(222, 243, 228)","rgb(218, 236, 240)","rgb(251, 234, 239)"];
 
-console.log(lastImg);
 let cloneFirst = firstImg.cloneNode(true);
 let cloneLast = lastImg.cloneNode(true);
 
@@ -29,7 +27,6 @@ let next;
 let current = 1;
 
 let slideImg = document.querySelectorAll('.slideDiv');
-console.log(slideImg.length);
 viewDiv.style.width = (slideImg.length) * 100 + '%';
 viewDiv.style.left = -(current * 100) + '%';
 slideImg.forEach((div,index)=>{
@@ -42,13 +39,10 @@ function slideMove(imgNum) {
     viewDiv.style.left = -(imgNum*100) + '%';
     bgColor.style.background = bgArr[imgNum]; //bg
     current = imgNum;
-    console.log(current);
     if (imgNum == 6){
-        console.log('마지막');
         firstCurrent();
     }
     if (imgNum == 0){
-        console.log('처음');
         lastCurrent();
     }
 }

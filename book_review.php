@@ -2,7 +2,7 @@
 
 <?php
     $bookno = $_GET['no'];
-    $conn = mysqli_connect('localhost','root','1234','mall');
+    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
     $query = "select * from review_note order by no desc";
     $result = mysqli_query($conn, $query);
     $total = mysqli_num_rows($result);
