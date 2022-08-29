@@ -1,7 +1,7 @@
 <footer>
             <div class="inner">
                 <div id="footerLogo">
-                    <h1><img src="/mall/image/logo.png" alt="botLogo"></h1>
+                    <h1><img src="/mall/image/etc/logo.png" alt="botLogo"></h1>
                 </div>
                 <div id="footerText">
                     <p>(주) 그린문고 울산시 삼산동 대표이사 손민영</p>

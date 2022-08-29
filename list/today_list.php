@@ -1,6 +1,6 @@
-<?php include "../include/header.php"; ?>
+<?php include "/host/home3/wiseblue31/html/mall/include/header.php"; ?>
 <?php
-  $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+  $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
   $query = "select * from realbook where todaybook= 'o'";
   $result = mysqli_query($conn, $query);
   $total = mysqli_num_rows($result);
@@ -72,4 +72,4 @@
     ?>
 </div>
 
-<?php include "../include/footer.php"; ?>
+<?php include "/host/home3/wiseblue31/html/mall/include/footer.php"; ?>

@@ -2,7 +2,7 @@
     session_start();
 
     //members 테이블에 등록된 회원인지 확인
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from members where id='{$_POST['userId']}'";
     $result = mysqli_query($conn, $query);
 

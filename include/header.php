@@ -1,6 +1,6 @@
-<?php
+﻿<?php
     session_start();
-    $conn = mysqli_connect('localhost','root','1234','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select name from members where id='{$_SESSION['userId']}'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($result);
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/mall/image/favicon.ico" />
+    <link rel="icon" href="/mall/image/etc/favicon.ico" />
     <title>GreenBooks</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/mall/css/style.css">
@@ -24,9 +24,9 @@
         <header>
             <div id="headerTop" class="inner">
                 <ul>
-                <li><a href="https://ko-kr.facebook.com/"><img src="/mall/image/facebook.png" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com/"><img src="/mall/image/insta1.png" alt="insta"></a></li>
-                    <li><a href="https://www.youtube.com/"><img src="/mall/image/youtube.png" alt="youtube"></a></li>
+                <li><a href="https://ko-kr.facebook.com/"><img src="/mall/image/etc/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="/mall/image/etc/insta1.png" alt="insta"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="/mall/image/etc/youtube.png" alt="youtube"></a></li>
                     <li><i class="material-icons">language</i></li>
                 </ul>    
                 <p>
@@ -65,7 +65,7 @@
             <div id="headerMiddle" class="inner">
                 <h1>
                     <a href="/mall/index.php">
-                        <img src="/mall/image/logo.png" alt="logo1">
+                        <img src="/mall/image/etc/logo.png" alt="logo1">
                     </a>
                 </h1>
                 <div id="search">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div id="addDiv">
-                    <img src="/mall/image/ad.png" alt="add1">
+                    <img src="/mall/image/etc/ad.png" alt="add1">
                 </div>
             </div>
             <div id="headerBottom">

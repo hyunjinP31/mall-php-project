@@ -1,6 +1,6 @@
 <?php
-    include_once 'include/header.php';
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    include_once '/host/home3/wiseblue31/html/mall/include/header.php';
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from realbook where best='o' limit 12;";
     $result = mysqli_query($conn, $query);
     function printImg() {
@@ -83,7 +83,7 @@
                     <div id="moveDiv">
                         <!-- <div class="slideDiv" style="background: rgb(251, 234, 239);"> -->
                         <div class="slideDiv">
-                            <img src="./image/earth.png" alt="vi1">
+                            <img src="/mall/image/etc/earth.png" alt="vi1">
                             <div class="posiText">
                                 <strong>지구를 지켜요</strong>
                                 <h2>그린북스와 함께 지구사랑 캠페인</h2>
@@ -92,7 +92,7 @@
                         </div>
                         <!-- <div class="slideDiv" style="background: rgb(248, 244, 216);"> -->
                         <div class="slideDiv">
-                            <img src="./image/enbooks.png" alt="vi2">
+                            <img src="/mall/image/etc/enbooks.png" alt="vi2">
                             <div class="posiText">
                                 <strong>세트 특가전</strong>
                                 <h2>영어그림책 베스트 모음전</h2>
@@ -101,7 +101,7 @@
                         </div>
                         <!-- <div class="slideDiv" style="background: rgb(230, 233, 246);"> -->
                         <div class="slideDiv">
-                            <img src="./image/slider1.png" alt="vi3">
+                            <img src="/mall/image/etc/slider1.png" alt="vi3">
                             <div class="posiText">
                                 <strong>MD 특별 추천</strong>
                                 <h2>내강아지 마음상담소</h2>
@@ -110,7 +110,7 @@
                         </div>
                         <!-- <div class="slideDiv"  style="background: rgb(222, 243, 228);"> -->
                         <div class="slideDiv">
-                            <img src="./image/visu4.png" alt="vi4">
+                            <img src="/mall/image/etc/visu4.png" alt="vi4">
                             <div class="posiText">
                                 <strong>소장하고 싶은 이야기</strong>
                                 <h2>Read Before Netflix</h2>
@@ -119,7 +119,7 @@
                         </div> 
                         <!-- <div class="slideDiv" style="background: rgb(218, 236, 240);"> -->
                         <div class="slideDiv">
-                            <img src="./image/visu5.png" alt="vi5">
+                            <img src="/mall/image/etc/visu5.png" alt="vi5">
                             <div class="posiText">
                                 <strong>그림책 기획전</strong>
                                 <h2>엄마, 아빠 나는 자라고 있어요!</h2>
@@ -142,7 +142,7 @@
             <div id="banner1">
                 <div class="inner">
                     <a href="#">
-                        <img src="./image/add1.png" alt="add1">
+                        <img src="/mall/image/etc/add1.png" alt="add1">
                     </a>
                 </div>
             </div>
@@ -169,7 +169,7 @@
             <div id="board" class="inner">
                 <div id="banner2">
                     <a href="/mall/banner2_View.php" id="bannerImg">
-                        <img src="./image/add2.png" alt="add2">
+                        <img src="/mall/image/etc/add2.png" alt="add2">
                         <div class="bg"></div>
                         <p class="hoverBtn">자세히보기<i class="material-icons">keyboard_arrow_right</i></p>
                     </a>
@@ -193,5 +193,5 @@
         </section>
         
         <?php
-            include_once 'include/footer.php';
+            include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
         ?>

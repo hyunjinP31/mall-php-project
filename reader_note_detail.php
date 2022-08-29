@@ -1,8 +1,8 @@
-<?php include_once "./include/header.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/header.php" ?>
 
 <?php
     $bookno = $_GET['no'];
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from readernote where no = {$bookno}";
     $result = mysqli_query($conn, $query);
     
@@ -29,4 +29,4 @@
         <?php printDesc() ?>
     </div>
 
-<?php include_once "./include/footer.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/footer.php" ?>

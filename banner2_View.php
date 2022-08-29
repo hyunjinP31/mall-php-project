@@ -1,5 +1,5 @@
 <?php
-    include_once 'include/header.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/header.php';
 ?>
 <section id="banner2" class="inner">
     <div id="banner2_wrap">
@@ -27,5 +27,5 @@
     </div>
 </div>
 <?php
-    include_once 'include/footer.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
 ?>

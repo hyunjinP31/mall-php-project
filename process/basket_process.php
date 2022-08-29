@@ -10,7 +10,7 @@
         <?php
     }
     $bookno = $_GET['no'];
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query2 = "insert into basket (id, title, writer, price, imgsrc)
     VALUES ('{$userId}', '{$_POST['title']}', '{$_POST['writer']}', '{$_POST['price']}', '{$_POST['imgsrc']}');";
     $query3 = "select * from basket";

@@ -1,9 +1,9 @@
 <?php
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from realbook";
     $file_tmp = $_FILES['img']['tmp_name'];
     echo $file_tmp;
-    move_uploaded_file($file_tmp, "C://Apache24/htdocs/mall/image/book/".$_FILES['img']['name']);
+    move_uploaded_file($file_tmp, "C:/Apache24/htdocs/mall/image/book/".$_FILES['img']['name']);
 //post전송으로 넘어온 데이터는 슈퍼글로벌 $_POST 변수가 배열형태로 받아진다
     $query = "
         insert into realbook(title, bookdate, pub, writer, price, imgsrc, textview, Kbook, NKbook, Ebook, best, todaybook, new)

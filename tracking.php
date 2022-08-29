@@ -1,5 +1,5 @@
 <?php
-    include_once 'include/header.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/header.php';
 ?>
     <section id="createBoard" class="inner">
         <h1>주문/배송 내역 확인</h1>
@@ -27,5 +27,5 @@
         </div>
     </section>
 <?php
-    include_once 'include/footer.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
 ?>

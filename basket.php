@@ -1,9 +1,9 @@
-<?php include_once "./include/header.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/header.php" ?>
 <script defer src="/mall/JS/basketJS.js"></script>
 <?php
 session_start();
 $userId = $_SESSION['userId'];
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from members
     inner join basket
     on members.id = basket.id
@@ -90,4 +90,4 @@ $userId = $_SESSION['userId'];
 
 
 
-<?php include_once "./include/footer.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/footer.php" ?>

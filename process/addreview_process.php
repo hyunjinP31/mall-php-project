@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+$conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
 $query = "insert into review_note(id, title, writedate, textveiw)
             values(
                 '{$_POST['name']}',

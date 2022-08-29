@@ -1,8 +1,8 @@
-<?php include_once "./include/header.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/header.php" ?>
 
 <?php
     $bookno = $_GET['no'];
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from readernote order by no desc";
     $result = mysqli_query($conn, $query);
     $total = mysqli_num_rows($result);
@@ -81,4 +81,4 @@
     <button onclick="location.href='/mall/process/addnote_process.php'">게시글 작성</button>
     </div>
 
-<?php include_once "./include/footer.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/footer.php" ?>

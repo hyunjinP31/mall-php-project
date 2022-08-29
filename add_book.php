@@ -1,5 +1,5 @@
-<?php
-    include_once 'include/header.php';
+﻿<?php
+    include_once '/host/home3/wiseblue31/html/mall/include/header.php';
 ?>
 <section id="addBook" class="inner">
         <form action="/mall/process/newBook_process.php" method="post" enctype="multipart/form-data">
@@ -86,5 +86,5 @@
         </form>
  </section>
 <?php
-    include_once 'include/footer.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
 ?>

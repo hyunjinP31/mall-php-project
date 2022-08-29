@@ -1120,7 +1120,7 @@ padding: 40px;
 }
 
 #createBoard form table {
-  width: 100%;
+  width: auto;
   margin: 0 auto;
 }
 

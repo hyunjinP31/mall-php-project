@@ -1,6 +1,6 @@
 <?php
     include_once '/host/home3/wiseblue31/html/mall/include/header.php';
-    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
+    $conn = mysqli_connect('localhost','root','1234','wiseblue31');
     $query = "select * from realbook where best='o' limit 12;";
     $result = mysqli_query($conn, $query);
     function printImg() {
@@ -17,7 +17,7 @@
             ";
         }
     }
-    $query2 = 'select * from review_note limit 4';
+    $query2 = 'select * from review_note order by no desc limit 4';
     $result2 = mysqli_query($conn, $query2);
     function printReview() {
         global $result2;
@@ -31,7 +31,7 @@
                     </li>";
         }
     }
-    $query3 = 'select * from reader_note limit 4';
+    $query3 = 'select * from readernote order by no desc limit 4';
     $result3 = mysqli_query($conn, $query3);
     function printReader() {
         global $result3;
@@ -51,7 +51,7 @@
         global $result4;
         while($row = mysqli_fetch_array($result4)){
             echo "  <div class='toBooks'>
-                        <h3>{$row['title']}</h3>
+                        <p>{$row['title']}</p> 
                         <div><img src='/mall/image/book/{$row['imgsrc']}'></div>
                         <a href=\"/mall/book_detail.php?no={$row['no']}\">
                             <p>자세히보기<i class='material-icons'>keyboard_arrow_right</i></p>
@@ -70,8 +70,8 @@
                         <a href='/mall/book_detail.php?no={$row['no']}'>
                             <div class='imgDiv'><img src='/mall/image/book/{$row['imgsrc']}'></div>
                             <p class='hoverBtn'>자세히보기<i class='material-icons'>keyboard_arrow_right</i></p>
-                            <p>{$row['title']}</p>
                         </a>
+                        <p>{$row['title']}</p>
                     </li>
             ";
         }
@@ -81,39 +81,49 @@
             <div id="visual">
                 <div id="visuWrap" class="inner">
                     <div id="moveDiv">
+                        <!-- <div class="slideDiv" style="background: rgb(251, 234, 239);"> -->
                         <div class="slideDiv">
-                            <img src="./image/slider1.png" alt="vi1">
+                            <img src="/mall/image/etc/earth.png" alt="vi1">
                             <div class="posiText">
-                                <p>MD 특별 추천</p>
-                                <h2>내 강아지 마음 상담소</h2>
+                                <strong>지구를 지켜요</strong>
+                                <h2>그린북스와 함께 지구사랑 캠페인</h2>
+                                <p>다른 그림 찾으면 1천원 상품권</p>
                             </div>
                         </div>
+                        <!-- <div class="slideDiv" style="background: rgb(248, 244, 216);"> -->
                         <div class="slideDiv">
-                            <img src="./image/slider2.png" alt="vi2">
+                            <img src="/mall/image/etc/enbooks.png" alt="vi2">
                             <div class="posiText">
-                                <p>MD 특별 추천</p>
-                                <h2>내 강아지 마음 상담소</h2>
+                                <strong>세트 특가전</strong>
+                                <h2>영어그림책 베스트 모음전</h2>
+                                <p>노부영 & 그린북스 단독상품</p>
                             </div>
                         </div>
+                        <!-- <div class="slideDiv" style="background: rgb(230, 233, 246);"> -->
                         <div class="slideDiv">
-                            <img src="./image/slider3.png" alt="vi3">
+                            <img src="/mall/image/etc/slider1.png" alt="vi3">
                             <div class="posiText">
-                                <p>MD 특별 추천</p>
-                                <h2>내 강아지 마음 상담소</h2>
+                                <strong>MD 특별 추천</strong>
+                                <h2>내강아지 마음상담소</h2>
+                                <p>누적 조회수 3백만! 유튜브 최고의 반려견 콘텐츠</p>
                             </div>
                         </div>
+                        <!-- <div class="slideDiv"  style="background: rgb(222, 243, 228);"> -->
                         <div class="slideDiv">
-                            <img src="./image/slider4.png" alt="vi4">
+                            <img src="/mall/image/etc/visu4.png" alt="vi4">
                             <div class="posiText">
-                                <p>MD 특별 추천</p>
-                                <h2>내 강아지 마음 상담소</h2>
+                                <strong>소장하고 싶은 이야기</strong>
+                                <h2>Read Before Netflix</h2>
+                                <p>원작도 궁금한 넷플릭스</p>
                             </div>
                         </div> 
+                        <!-- <div class="slideDiv" style="background: rgb(218, 236, 240);"> -->
                         <div class="slideDiv">
-                            <img src="./image/slider5.png" alt="vi5">
+                            <img src="/mall/image/etc/visu5.png" alt="vi5">
                             <div class="posiText">
-                                <p>MD 특별 추천</p>
-                                <h2>내 강아지 마음 상담소</h2>
+                                <strong>그림책 기획전</strong>
+                                <h2>엄마, 아빠 나는 자라고 있어요!</h2>
+                                <p>칠교문구세트</p>
                             </div>
                         </div>
                     </div>
@@ -132,30 +142,34 @@
             <div id="banner1">
                 <div class="inner">
                     <a href="#">
-                        <img src="./image/add1.png" alt="add1">
+                        <img src="/mall/image/etc/add1.png" alt="add1">
                     </a>
                 </div>
             </div>
             <div id="news" class="inner">
                 <div id="newBooks">
-                    <h3>추천 신간</h3>
+                    <h2>추천 신간</h2>
+                    <div id="newBooks_wrap">
+                        <ul>
+                            <?php printNewbook(); ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="bestBooks" class="inner">
+                <h2>베스트셀러</h2>
+                <div id="newBooks_wrap">
                     <ul>
-                        <?php printNewbook(); ?>
+                        <?php
+                            printImg();
+                        ?>
                     </ul>
                 </div>
             </div>
-            <div id="bestBooks">
-                <h2>베스트셀러</h2>
-                <ul class="inner">
-                    <?php
-                        printImg();
-                    ?>
-                </ul>
-            </div>
             <div id="board" class="inner">
                 <div id="banner2">
-                    <a href="#" id="bannerImg">
-                        <img src="./image/add2.png" alt="add2">
+                    <a href="/mall/banner2_View.php" id="bannerImg">
+                        <img src="/mall/image/etc/add2.png" alt="add2">
                         <div class="bg"></div>
                         <p class="hoverBtn">자세히보기<i class="material-icons">keyboard_arrow_right</i></p>
                     </a>
@@ -179,5 +193,5 @@
         </section>
         
         <?php
-            include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
+            include_once 'C:/Apache24/htdocs/mall/include/footer.php';
         ?>

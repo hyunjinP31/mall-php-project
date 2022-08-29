@@ -1,5 +1,5 @@
 <?php
-    include_once 'include/header.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/header.php';
 ?>
 <?php
     session_start();
@@ -45,5 +45,5 @@
         </form>
  </section>
 <?php
-    include_once 'include/footer.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
 ?>

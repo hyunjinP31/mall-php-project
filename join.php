@@ -1,5 +1,5 @@
 <?php
-    include_once 'include/header.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/header.php';
 ?>
     <section id="createBoard" class="inner">
         <form action="/mall/process/create_process.php" method="post">
@@ -86,5 +86,5 @@ $selectAddr.addEventListener('change', function(){
         </script>
     </section>
 <?php
-    include_once 'include/footer.php';
+    include_once '/host/home3/wiseblue31/html/mall/include/footer.php';
 ?>

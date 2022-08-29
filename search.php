@@ -1,7 +1,7 @@
-<?php include_once "./include/header.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/header.php" ?>
 <script defer src="/mall/JS/basketJS.js"></script>
 <?php
-    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
+    $conn = mysqli_connect("localhost","wiseblue31","blueviolet31*","wiseblue31");
     $query = "select * from realbook where title like '%{$_POST['search']}%'";
     $query2 = "select * from realbook";
     $result = mysqli_query($conn, $query);
@@ -36,4 +36,4 @@
         </table>
     </form>
 </div>
-<?php include_once "./include/footer.php" ?>
+<?php include_once "/host/home3/wiseblue31/html/mall/include/footer.php" ?>
