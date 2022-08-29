@@ -3,7 +3,7 @@
 <?php
 session_start();
 $userId = $_SESSION['userId'];
-    $conn = mysqli_connect('localhost','root','1234','mall');
+    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
     $query = "select * from members
     inner join basket
     on members.id = basket.id

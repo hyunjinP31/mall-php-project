@@ -1,6 +1,6 @@
 <?php
     include_once 'include/header.php';
-    $conn = mysqli_connect('localhost','root','1234','mall');
+    $conn = mysqli_connect('comet.cioafewefkse.us-east-1.rds.amazonaws.com','root','123$567*','mall');
     $query = "select * from realbook where best='o' limit 12;";
     $result = mysqli_query($conn, $query);
     function printImg() {
