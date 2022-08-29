@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap");
 @keyframes movescroll {
   0%{bottom: 5%;}
   50%{bottom: 5.5%;}
@@ -120,12 +120,6 @@ header #headerTop ul li {
 
 header #headerTop ul:first-child li:hover{
     transform: scale(1.1);
-}
-
-header #headerTop ul li a {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
 }
 
 header #headerTop ul li a img {
